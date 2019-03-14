@@ -1,0 +1,142 @@
+/**index.wxss**/
+.page{
+  background:ghostwhite;
+}
+.taocan{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  line-height: 70rpx;
+}
+.title{
+  font-size: 42rpx;
+  font-weight: bold;
+}
+.price{
+  color: red;
+  font-size: 50rpx
+}
+.info{
+  font-size: 30rpx;
+  color: gray;
+}
+.oldprice{
+  font-size: 30rpx;
+  text-decoration: line-through;
+  color: gray;
+}
+.yhprice{
+  font-size: 35rpx;
+}
+.buttons1{
+  margin-top:10rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  height: 100%;
+  width: 95%;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  background:white;
+  align-items: center;
+}
+.btn1 {
+  width: 90%;
+  margin-top: 10rpx;
+  color:black;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 30rpx;
+}
+.sheng{
+  font-size:20rpx;
+  background-color: red;
+  color:white;
+}
+.btnprice{
+  font-size: 35rpx;
+  color: red;
+  text-align: center
+}
+.btnShengPrice{
+  font-size:20rpx;
+  color: gray;
+}
+
+.hr{
+  border:1px solid black;
+  opacity: 0.2;
+  width: 90%;
+}
+.tips{
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+  background:white;
+  border-radius: 20rpx;
+  height: 100%;
+  width: 95%;
+}
+.tipsPic{
+  width: 45rpx;
+  height: 32rpx;
+  margin-left: 20rpx;
+}
+.tipsInfo{
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  color: gray;
+}
+
+.buttons2{
+  margin-top:30rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-bottom: 20rpx;
+  height: 100%;
+  width: 95%;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  text-align: center;
+  background:white;
+  align-items: center;
+}
+.detail{
+  font-size: 28rpx;
+}
+
+.chanPin{
+  margin-left: 100rpx;
+  margin-right: 50rpx; 
+}
+.service{
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  text-decoration:"";
+}
+
+.attention{
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.picdetail{
+  width:70%;
+  height:1100rpx;
+  margin-left: 15%;
+}
+
+.add_btn{
+    width: 100%;
+    position: fixed;
+    bottom: 30rpx;
+}
+.btn{
+    margin-top: 30rpx;
+    width: 450rpx;
+    background:green;
+    color: #fff;
+    border-radius: 70rpx;
+}

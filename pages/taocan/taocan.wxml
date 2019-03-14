@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="img">
+    <image src="{{topImgUrl}}" style="width:100%;height:500rpx"></image>
+  </view>
+
+  <view class="taocan">
+    <text class="title">{{taocaninfo.title}}</text>
+    <view class="priceinfo">
+      <text class="price">￥{{taocaninfo.price}}</text>
+      <text class="info"> {{taocaninfo.serviceinfo}}</text>
+      <text class="oldprice">{{taocaninfo.oldPrice}}</text>
+    </view>
+    <view class="yhprice">
+      <text>套餐优惠价格</text>
+    </view>
+  </view>
+
+  <view wx:for="{{taocaninfo.youhuiItem}}" wx:key="shengPrice" wx:if="{{youhuiItemLen > 1}}">
+    <view class="buttons1">
+      <view class="btn1" open-type="openSetting" data-index="{{index}}" style="background:{{bk[index].color}}" bindtap="yuyue1">
+        <view>
+          <text class="info" decode="{{true}}">{{item.info}}&emsp;&emsp;&emsp;&emsp;</text>
+  	      <text class="btnprice" decode="{{true}}">￥{{item.price}}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</text>
+          <text class="sheng">省</text>
+          <text class="btnShengPrice">{{item.shengPrice}}元</text>
+        </view>
+      </view>    
+    </view>
+    <view class="hr"></view>
+  </view>
+
+  <view class="buttons1" wx:if="{{youhuiItemLen==1}}">
+    <view class="btn1" open-type="openSetting" style="background:{{bk1}}" bindtap="yuyue2">
+      <view>
+  	    <text class="info" decode="{{true}}">{{taocaninfo.youhuiItem.info}}&emsp;&emsp;&emsp;&emsp;</text>
+  	    <text class="btnprice" decode="{{true}}">￥{{taocaninfo.youhuiItem.price}}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</text>
+        <text class="sheng">省</text>
+        <text class="btnShengPrice">{{taocaninfo.youhuiItem.shengPrice}}元</text>
+      </view>
+    </view>
+    <view class="hr"></view>
+  </view>
+  
+  <view class="tips">
+    <image class="tipsPic" src="http://www.yztcc.com/icon_yulai/tips.png"></image>
+    <text class="tipsText"> 适宜人群</text>
+    <view class="tipsInfo">
+      <text>{{taocaninfo.tipsInfo}}</text>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="buttons2">
+  	<view class="chanPin" open-type="openSetting" style="color:{{bn2bk1}}; text-decoration:{{bn2line1}}" bindtap='chanPin'>
+  		<text class="detail">产品详情</text>
+  	</view>
+  	<view class="service" open-type="openSetting" style="color:{{bn2bk2}}; text-decoration:{{bn2line2}}" bindtap='fuWu'>
+  		<text class="detail">服务说明</text>
+  	</view>
+  	<view class="attention" open-type="openSetting" style="color:{{bn2bk3}}; text-decoration:{{bn2line3}}" bindtap='zhuYi'>
+  		<text class="detail">注意事项</text>
+  	</view>
+  </view>
+
+  <view class="hr"></view>
+
+  <image class="picdetail" src="{{imgurl}}"></image>
+  <view class="hr"></view>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <view class='add_btn'>
+    <button class='btn'>
+        去支付
+    </button>
+  </view>
+</view>

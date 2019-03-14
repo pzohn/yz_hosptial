@@ -1,0 +1,138 @@
+/**index.wxss**/
+.matrix{width: 100%;margin: 0 auto 1em;background-color: #fff;height: 40%;padding: 0%;}
+.matrix .nav-btn{width: 50%;height: 50%;float: left;overflow: hidden;padding: 0;}
+.matrix button.nav-btn::after{display: none;}
+.matrix .matrix-btn{float: left; height: 94%;line-height: 36rpx;box-sizing: border-box;color: #fff;margin:4% 2%;border-radius: 5px;}
+.matrix .matrix-btn .title{font-size: 32rpx;float: left;margin:30% 0 0 5%;font-weight: bold}
+.matrix .matrix-btn .info{font-size: 28rpx;float: left;margin:15rpx 0 0 5%;}
+.matrix .matrix-btn.kswz{background-color:#87bbe7; }
+.matrix .matrix-btn.yygh{background-color:#979be6;}
+.matrix .matrix-btn.gtpp{background-color:#72c08a;}
+.matrix .matrix-btn.lllx{background-color:#39cdac;}
+.matrix .matrix-btn.user{background-color:#39cdac;}
+.matrix .matrix-btn icon{display: block; width: 120rpx;height: 120rpx;float: right;background-size: 100% auto;margin:5% 5% 0 0;background-position: center;background-color: #fff;border-radius: 50%;background-repeat: no-repeat;}
+.matrix .matrix-btn.kswz icon{background-image: url(https://yztcc.com/yulai/guahao.png);}
+.matrix .matrix-btn.yygh icon{background-image: url(https://yztcc.com/yulai/hushi.png);}
+.matrix .matrix-btn.gtpp icon{background-image: url(https://yztcc.com/yulai/yisheng.png);}
+.matrix .matrix-btn.user icon{background-image: url(https://yztcc.com/yulai/zulin.png);}
+.matrix::after,.diagnosis::after,.ask-icon::after,.comment::after{content: "";display: block; width: 0;height: 0;clear: both;}
+
+.page-recommend {
+  margin-top: 20rpx;
+  background-color: #fff;
+  width: 100%;
+  display: block;
+}
+.recommend-top{
+ text-align: center;
+ font-size: 32rpx;
+ padding-top: 20rpx;
+}
+.recommend-top span{
+  line-height: 32rpx;
+  color: #444;
+}
+.recommend-top span .recommend-top-line{
+  border-bottom: 2px solid red;
+  width: 40rpx;
+  display: inline-block;
+  margin-bottom:10rpx;
+}
+
+.item_left{
+  display: inline-block;
+}
+.item_middle{
+  position: absolute;
+  display: inline-block;
+  margin-left: 20rpx;
+  padding-top: 16rpx;
+  overflow: hidden;
+}
+.item_middle .title{
+  font-size: 34rpx;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+}
+
+.item_right{
+  display: inline-block;
+  padding-top: 120rpx;
+}
+
+.service-cells{
+  font-size: 25rpx;
+}
+
+.service-cell{
+  font-size: 25rpx;
+}
+
+.item_left{
+  display: inline-block;
+}
+.item_left image{
+  display: block;
+  width: 160rpx;
+  height: 120rpx;
+  margin: 14rpx 0 14rpx 0;
+  background-size: cover;
+}
+.item_middle{
+  display: inline-block;
+  margin-left: 20rpx;
+  padding-top: 16rpx;
+  overflow: hidden;
+}
+.item_right .title{
+  font-size: 32rpx;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+}
+.item_middle .price{
+  display: inline-block;
+  font-size: 42rpx;
+  color: #f16649;
+  margin-top: 4rpx;
+  font-weight: bold;
+}
+.item_middle .old_price{
+  color: #848484;
+  display: inline-block;
+  margin: 4rpx 15rpx 0 20rpx;
+  text-decoration: line-through;
+}
+.item_middle .money{
+  display: inline-block;
+  font-size: 26rpx;
+  margin-right: 5rpx;
+}
+.item_right{
+  display: inline-block;
+  float: right;
+  padding-top: 36rpx;
+}
+.item_right .saled{
+  margin-top: 60rpx;
+  color: #848484;
+  display: inline-block;
+  padding: 4rpx 30rpx 0 0;
+  font-size: 28rpx;
+  line-height: 32rpx;
+  text-align: center;
+}
+
+.item_middle .title{
+  font-size: 28rpx;
+}
+
+.item_middle .info{
+  color: #909090;
+}
+
+.hr{
+  border:1px solid #cccccc;
+  opacity: 0.2;
+}

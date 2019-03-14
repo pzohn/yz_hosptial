@@ -1,0 +1,78 @@
+<!--index.wxml-->
+<view class="matrix">
+    <view class="nav-btn active" bindtap="yuyueguahao">
+      <view class="matrix-btn kswz">
+        <icon class="kswz"/>
+        <view class="title">预约挂号</view>
+        <view class="info">无需排队 免费挂号</view>
+      </view>
+    </view>
+    <view class="nav-btn active" bindtap="hushishangmen">
+      <view class="matrix-btn yygh">
+        <icon class="yygh"/>
+        <view class="title">护士上门</view>
+        <view class="info">打针输液 换药护理</view>
+      </view>
+    </view>
+    <view class="nav-btn active" bindtap="yishengshangmen">
+      <view class="matrix-btn gtpp">
+        <icon class="gtpp"/>
+        <view class="title">医生上门</view>
+        <view class="info">看病开药 会诊保健</view>
+      </view>
+    </view>
+    <view class="nav-btn active" bindtap="shebeizhulin">
+      <view class="matrix-btn user">
+        <icon class="user"/>
+        <view class="title">医疗设备租赁</view>
+        <view class="info">安全优质 稳定可靠</view>
+      </view>
+    </view>
+  </view>
+
+<view class="hr"></view>
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+	<block wx:for="{{imgUrls}}" wx:key="unique">
+		<swiper-item>
+			<image style="width:100%; height:150px;" src="{{item}}" class="slide-image"/>
+		</swiper-item>
+	</block>
+</swiper>
+
+<view class="page-recommend">
+	<view class="recommend-top">
+		<span><p class="recommend-top-line"> </p>  热门服务  <p class="recommend-top-line">  </p></span>
+	</view>
+	
+  <view class="service-cells">
+    <view wx:for-items="{{list}}"  wx:key="unique">
+    	<view class="service-cell" bindtap="bindViewTap" data-title="{{item.title}}">
+    		<view class="item_left">
+    			<image src="http://www.yztcc.com/icon_yulai/{{item.icon}}"></image>
+    		</view>
+    		<view class="flex_auto item_middle">
+    			<view>
+    				<text class="title">{{item.title}}</text>
+    				<view class="info">
+    					<text>{{item.info}}</text>
+    				</view>
+    			</view>
+    			<text class="price">
+            <text class="money">￥</text>{{item.price}}</text>
+            <text class="old_price">
+              <text class="money">￥</text>{{item.oldPrice}}
+          </text>
+    		</view>
+    		<view class="item_right">
+    			<view>
+    				<text class="saled">已售{{item.buyCnt}}</text>
+    			</view>
+    		</view>
+    	</view>
+      <view class="hr"></view>
+    </view>
+  </view>
+	
+</view>
+

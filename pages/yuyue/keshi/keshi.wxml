@@ -1,0 +1,15 @@
+<view class="keshipage">
+  <view class="yeTitle">
+    <text>选择科室</text>
+  </view>
+  <view class="hr"></view>
+
+  <view class="allkeshi">
+    <block wx:for="{{keshi}}" wx:key="item.title">
+      <view class="keshi" bindtap="yuyue" data-title="{{item.title}}">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="hr"></view>
+    </block>
+  </view>
+</view>

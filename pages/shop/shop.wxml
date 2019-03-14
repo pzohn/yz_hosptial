@@ -1,0 +1,117 @@
+<!--index.wxml-->
+<view class="container">
+ <view class="dingwei">
+  <view class="dingweiBg">
+    <view>
+      <image src="https://www.yztcc.com/icon/dingwei.png" style="width:20px;height:21px;"></image>
+    </view>
+    <view>
+      <span>{{address}}</span>
+    </view>
+  </view>
+  <view class="dingweibtn" bindtap="switchcity">切换城市</view>
+</view>
+<view class="hr"></view>
+  <view class="page-banner">
+    <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}" wx:key="imgUrls">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    </view>
+  </view>
+
+ <view class="search">
+  <view class="searchBg">
+    <view>
+      <image src="https://www.yztcc.com/icon/search.jpg" style="width:20px;height:21px;"></image>
+    </view>
+    <view>
+      <input type="text" placeholder="请输入所要租赁的商品名称" placeholder-class="holder" bindinput="accountInput" />
+    </view>
+  </view>
+  <view class="btn" bindtap="resetSearch">搜索</view>
+</view>
+
+    <view class="page-recommend">
+    <view class="items-bottom">
+        <view class="items-div" bindtap="select" id="1">
+           <view class="items-img">
+               <image src=https://www.yztcc.com/icon/1.png" class="slide-image"/>
+           </view>
+           <view class="items-content">
+             <span class="items-content-title">呼吸制氧</span>
+           </view>
+        </view>
+        <view class="items-div"  bindtap="select" id="2">
+              <view class="items-img">
+                  <image src="https://www.yztcc.com/icon/2.png" class="slide-image"/>
+              </view>
+              <view class="items-content">
+                <span class="items-content-title">康复辅具</span>
+              </view>
+          </view>
+          <view class="items-div"  bindtap="select" id="3">
+                <view class="items-img">
+                    <image src="https://www.yztcc.com/icon/3.png" class="slide-image"/>
+                </view>
+                <view class="items-content">
+                  <span class="items-content-title">心率仪</span>
+                </view>
+          </view>
+          <view class="items-div"  bindtap="select" id="4">
+                <view class="items-img">
+                    <image src="https://www.yztcc.com/icon/4.png" class="slide-image"/>
+                </view>
+                <view class="items-content">
+                  <span class="items-content-title">轮椅出行</span>
+                </view>
+          </view>
+          <view class="items-div"  bindtap="select" id="5">
+                <view class="items-img">
+                    <image src="https://www.yztcc.com/icon/5.png" class="slide-image"/>
+                </view>
+                <view class="items-content">
+                  <span class="items-content-title">净化器</span>
+                </view>
+          </view>
+    </view>
+ </view>
+
+  <view class="page-recommend">
+     <view class="recommend-top">
+        <span><p class="recommend-top-line"> </p>  精品推荐  <p class="recommend-top-line">  </p></span>
+     </view>
+
+  <view class='hotgoodcontainer'>
+      <view class='gooditem' wx:for="{{recommend}}" wx:key="recommend" wx:for-index="idx" wx:for-item="good" bindtap="recommendGood" id="{{good.id}}">
+        <view class='imgview'>
+          <image class='productimg' src='{{good.url}}'/>
+        </view>
+        <view>{{good.title}}</view>
+        <view class='goodprice'>{{good.price}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page-hotrec">
+    <view class="hotrec-top">
+       <span><p class="hotrec-top-line"> </p>  热门推荐  <p class="hotrec-top-line">  </p></span>
+    </view>
+
+      <view class='hotgoodcontainer'>
+      <view class='gooditem' wx:key="gooditem" wx:for="{{hotrec}}" wx:for-index="idx" wx:for-item="good" bindtap="hotrecGood" id="{{good.id}}">
+        <view class='imgview'>
+          <image class='productimg' src='{{good.url}}'/>
+        </view>
+        <view>{{good.title}}</view>
+        <view class='goodprice'>{{good.price}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/yuyue/yuyue",
+    "pages/yuyue/keshi/keshi",
+    "pages/yuyue/getdate/getdate",
+    "pages/hushishangmen/hushishangmen",
+    "pages/yishengshangmen/yishengshangmen",
+    "pages/yihushangmen/yihushangmen",
+    "pages/taocan/taocan",
+    "pages/login/login",
+    "pages/registor/registor",
+    "pages/orderlist/orderlist",
+    "pages/order/order",
+    "pages/shop/shop",
+    "pages/search/search",
+    "pages/details/details",
+    "pages/leasing/leasing"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#39cdac",
+    "navigationBarTitleText": "永贞医疗",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/shouye1.png",
+        "selectedIconPath": "icons/shouye2.png"
+      },
+      {
+        "pagePath": "pages/yuyue/yuyue",
+        "text": "预约挂号",
+        "iconPath": "icons/yuyue1.png",
+        "selectedIconPath": "icons/yuyue2.png"
+      },
+      {
+        "pagePath": "pages/yihushangmen/yihushangmen",
+        "text": "医护上门",
+        "iconPath": "icons/yihu1.png",
+        "selectedIconPath": "icons/yihu2.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "设备租赁",
+        "iconPath": "icons/chaoshi1.png",
+        "selectedIconPath": "icons/chaoshi2.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "我的帐户",
+        "iconPath": "icons/zhanghu1.png",
+        "selectedIconPath": "icons/zhanghu2.png"
+      }
+    ]
+  }
+}

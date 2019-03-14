@@ -1,0 +1,83 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="title">
+    <text>选择预约医生和预约时间</text>
+  </view>
+  <view class="hr"></view>
+
+  <view class="section">  
+    <picker mode="date" value="{{date}}" start="{{startDate}}" end="2030-01-01" bindchange="bindDateChange"> 
+      <view class="myitem"> 
+        <image class="myicon" src="http://www.yztcc.com/icon_yulai/date.png"></image>
+        <view class="picker">  
+        选择日期： {{dates}}  
+        </view>
+      </view>
+    </picker>  
+  </view>  
+  <view class="hr"></view>
+
+  <view class="section" >  
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" mode = "selector"> 
+    <view class="myitem"> 
+      <image class="myicon" src="http://www.yztcc.com/icon_yulai/time.png"></image>
+      <view class="picker">  
+      选择时间： {{objectArray[index]}}  
+      </view>
+    </view>
+    </picker>  
+  </view>  
+  <view class="hr"></view>
+
+  <view class="section" >  
+    <picker bindchange="bindDoctorChange" value="{{index}}" range="{{doctors}}" mode = "selector"> 
+    <view class="myitem"> 
+      <image class="myicon" src="http://www.yztcc.com/icon_yulai/doctor.png"></image>
+      <view class="picker">  
+      选择医生： {{doctors[doctorindex]}}  
+      </view>
+    </view>
+    </picker>  
+  </view>  
+  <view class="hr"></view>
+
+  <view class="explain">
+    <image class="explainicon" src="http://www.yztcc.com/icon_yulai/explain.png"></image>
+    <text class="shuoming">预约说明</text>
+  </view>
+  <view class="hr"></view>
+  <view class="detail">
+    <text>为方便您早日就医康复，请您认真阅读预约挂号须知：\n</text>
+    <text class="session">一、预约时间范围：\n</text>
+    <text>普通专家门诊：</text>
+    <text>1、您可预约7天内全部专业号源和大部分专家号源。节假日不安排预约号（含周六、周日）。\n</text>
+    <text>2、每日16:00开始放第7日的新号，每日12：00之后停止预约次日的号。\n</text>
+    <text>特需门诊：\n</text>
+    <text>1、您可预约7天内的专家号源。节假日不安排预约号（含周六、周日）。\n</text>
+    <text>2、每日16:00开始放第7日的新号，每日12：00之后停止预约次日的号。\n</text>
+    <text class="session">二、预约实名制：\n</text>
+    <text>统一平台电话预约和网上预约挂号均采取实名制注册预约，请您如实提供就诊人员的真实姓名、有效证件号（身份证、军官证、护照）、性别、电话、手机号码等基本信息\n</text>
+    <text class="session">三、预约取号：\n</text>
+    <text>1、预约成功后，请患者于就诊当日携带本人有效证件、预约识别码取号，同时验证预约信息\n</text>
+    <text>2、患者取号时，提前告知医院窗口挂号员为114电话预约或网站预约挂号。</text>
+    <text>3、取号时间\n</text>
+    <text>普通专家门诊：上午就诊患者，就诊当日早8：00-9：30到医院窗口取号。下午就诊患者，就诊当日下午13：00-14：30到医院窗口取号。\n</text>
+    <text>特需门诊：上午就诊患者，就诊当日早8：00-9：30到医院取号。下午就诊患者，就诊当日下午13：00-14：30到医院取号。\n</text>
+    <text>4、取号地点\n</text>
+    <text>普通专家门诊：除妇科、产科、儿科预约号外均在北大医院门诊自助机/挂号窗口/收费窗口\n</text>
+    <text>妇科、产科、儿科预约号在妇儿门诊挂号室窗口取号\n</text>
+    <text>\n</text>
+    <text>\n</text>
+    <text>\n</text>
+    <text>\n</text>
+    <text>\n</text>
+    <text>\n</text>
+  </view>
+  <view class="hr"></view>
+
+  <view class='add_btn'>
+    <button class='btn'>
+        立即预约
+    </button>
+  </view>
+</view>

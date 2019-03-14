@@ -1,0 +1,29 @@
+
+<!--pages/shoporder/shoporder.wxml-->
+<view>
+  <view class="order-shop-list">
+
+    <!--购物车商品列表-->
+    <view wx:for="{{orderShopList}}" wx:key="orderShopList">
+      <view class="orderShopList" data-item-index="{{index}}" bindtap="onItemClick">
+        <view class="first-line">
+          <text>{{item.BillDate}}</text>
+          <text class="delete-btn">{{item.Status}}</text>
+        </view>
+        <view>
+          <text class="text-left">订单编号</text>
+          <text>{{item.BillNo}}</text>
+        </view>
+        <view>
+          <text class="text-left">租赁商品</text>
+          <text>{{item.EmpFullName}}</text>
+          <text class="text-money">¥ {{item.TotalTaxAmount}}</text>
+        </view>
+        <view>
+          <text class="text-left">配送公司</text>
+          <text>{{item.Address}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
