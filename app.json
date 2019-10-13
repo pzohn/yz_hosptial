@@ -56,5 +56,6 @@
         "selectedIconPath": "icons/zhanghu2.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
