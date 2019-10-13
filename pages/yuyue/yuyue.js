@@ -95,7 +95,7 @@ Page({
         
         for (i = 0; i < res.data.length; i++)
         {
-          if ( i >= 1 )
+          //if ( i >= 1 )
           {
             citys.push(res.data[i].name);
           }
