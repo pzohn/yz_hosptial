@@ -155,21 +155,18 @@ Page({
       return;
     }
     if (app.globalData.address_id == 0){
-      wx.navigateTo({
-        url: '../selectaddress/selectaddress'
+      wx.showModal({
+        title: '提示',
+        content: '请选择收货地址!',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '../selectaddress/selectaddress'
+            });
+          }
+        }
       });
-      // wx.showModal({
-      //   title: '提示',
-      //   content: '请选择收货地址!',
-      //   showCancel: false,
-      //   success: function (res) {
-      //     if (res.confirm) {
-      //       wx.navigateTo({
-      //         url: '../selectaddress/selectaddress'
-      //       });
-      //     }
-      //   }
-      // });
       return;
     }
 
