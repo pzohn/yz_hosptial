@@ -5,16 +5,27 @@ const app = getApp()
 Page({
   data: {
     tapCurrent: 0,
-    address: []
+    address: [],
+    addrname:'确认下单',
+    hiddenLoading: false,
+    addnullflag:false
   },
 
   onLoad: function () {
     this.initData();
   },
 
+  onReady: function () {
+    var tt = this;
+    setTimeout(function () {
+      tt.setData({
+        hiddenLoading: true
+      });
+    }, 2000)
+  },
+  
   initData: function () {
     var page = this;
-    var app = getApp();
     wx.request({
       url: 'https://www.yztcc.com/getAddresses',
       data: {
@@ -22,9 +33,11 @@ Page({
       },
       method: 'POST',
       success: function (res) {
+        console.log(res)
         var array = [];
         if (res.data != 0) {
           var count = res.data.count;
+          console.log(res.data)
           var default_id = res.data.address_defult_id;
           if (count > 1) {
             for (var index in res.data.addresses) {
@@ -41,6 +54,10 @@ Page({
               }
               array[index] = object;
             }
+            page.setData({
+              addrname: '确认下单',
+              addnullflag: false
+            });
           } else if (count == 1) {
             var object = new Object();
             object.name = res.data.addresses.name;
@@ -51,10 +68,17 @@ Page({
             if (object.id == default_id) {
               object.default = true;
             } else {
-              object.default = false;;
+              object.default = false;
             }
             array[0] = object;
+            page.setData({
+              addrname: '确认下单',
+              addnullflag: false
+            });
           }
+        } else {
+          page.setData({ addrname:'添加地址',
+            addnullflag:true});
         }
         page.setData({ address: array });
       },
@@ -73,16 +97,22 @@ Page({
   },
 
   pay:function(){
-    var app = getApp();
-    var array = this.data.address;
-    for (var index in array) {
-      var object = array[index];
-      if (object.default == true) {
-        app.globalData.address_id = object.id;
-        wx.navigateBack({
-          delta: 1
-        });
+    if (this.data.addnullflag == false){
+      var app = getApp();
+      var array = this.data.address;
+      for (var index in array) {
+        var object = array[index];
+        if (object.default == true) {
+          app.globalData.address_id = object.id;
+          wx.navigateBack({
+            delta: 1
+          });
+        }
       }
+    }else{
+      wx.redirectTo({
+        url: '/pages/newaddress/newaddress?have=' + 0
+      })
     }
   },
 
