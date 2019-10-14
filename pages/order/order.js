@@ -99,6 +99,9 @@ Page({
       });
       app.globalData.authorizeFlag = true;
     }
+    if (app.globalData.loginFlag == true) {
+      this.setData({ phone: app.globalData.phone });
+    }
   },
 
   loadCoupon: function () {

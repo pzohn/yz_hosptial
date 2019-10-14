@@ -83,6 +83,16 @@ Page({
 
   onLoad:function(e)
   {
+    var app = getApp();
+    var loginCode = wx.getStorageSync('phone');
+    var loginId = wx.getStorageSync('login_id');
+    if (loginCode == "" || loginId == "") {
+      app.globalData.loginFlag = false;
+    } else {
+      app.globalData.loginFlag = true;
+      app.globalData.phone = loginCode;
+      app.globalData.login_id = loginId;
+    }
     this.getService("hot");
   }
 })

@@ -69,6 +69,8 @@ Page({
             var app = getApp();
             app.globalData.login_id = res.data.id;
             app.globalData.phone = res.data.phone;
+            wx.setStorageSync('phone', app.globalData.phone);
+            wx.setStorageSync('login_id', app.globalData.login_id);
             app.globalData.loginFlag = true;
             wx.navigateBack({
               delta: 1

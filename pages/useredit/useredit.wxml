@@ -1,0 +1,30 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="content">
+  <view class="hr"></view>
+  <view class="item">
+     <text>电话号码：</text> 
+     <text>{{phone}}</text>
+  </view>
+  <view class="item">
+     <text>姓名：</text> 
+     <input type="text" name="name" value= '{{name}}'/>
+  </view>
+  <view class="item">
+     <text>性别：</text> 
+     <text>{{sex}}</text>
+  </view>
+  <view class="item">
+     <text>年龄：</text> 
+     <input type="number" name="age" value= '{{age}}'/>
+  </view>
+  <view class="item">
+     <text>家庭住址：</text>
+     <input type="text" name="address" value= '{{address}}'/>
+  </view>
+
+  <view class="button">
+      <button class="btn" type="primary" form-type="submit">保存</button>
+  </view>
+</view>
+
+</form>

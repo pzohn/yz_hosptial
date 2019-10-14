@@ -13,14 +13,28 @@
     "pages/orderlist/orderlist",
     "pages/order/order",
     "pages/shop/shop",
+    "pages/getuser/getuser",
     "pages/search/search",
+    "pages/switchcity/switchcity",
     "pages/details/details",
-    "pages/leasing/leasing"
+    "pages/leasing/leasing",
+    "pages/collect/collect",
+    "pages/address/address",
+    "pages/newaddress/newaddress",
+    "pages/userInfo/userInfo",
+    "pages/editaddress/editaddress",
+    "pages/useredit/useredit",
+    "pages/selectaddress/selectaddress"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#39cdac",
-    "navigationBarTitleText": "永贞医疗",
+    "navigationBarTitleText": "永贞科技",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {

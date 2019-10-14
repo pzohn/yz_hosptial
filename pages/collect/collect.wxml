@@ -1,0 +1,6 @@
+<loading hidden="{{hiddenLoading}}">正在加载</loading> 
+<view class="hr"></view>
+  <import src="../template/collect_template" />
+  <view class="list">
+    <template is="goods" data="{{array}}" />
+  </view>
